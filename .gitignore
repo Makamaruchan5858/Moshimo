@@ -1,0 +1,4 @@
+models/*.gguf
+.venv/
+*_output.log
+*.log

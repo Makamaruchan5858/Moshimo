@@ -1,0 +1,12 @@
+# MOSHIMO Project Requirements
+
+# Core LLM library
+llama-cpp-python>=0.2.11
+
+# For FastAPI server (as used by current server scripts)
+fastapi
+uvicorn[standard]
+
+# Other potential dependencies, uncomment if needed
+# numpy
+# pydantic
