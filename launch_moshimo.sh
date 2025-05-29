@@ -30,11 +30,13 @@ fi
 
 # Create required directories
 mkdir -p models
+mkdir -p models/wizardcoder
+mkdir -p models/swallow
 mkdir -p logs
 
 # Download WizardCoder model if it doesn't exist
-WIZARDCODER_URL="https://www.dropbox.com/scl/fi/gop0dewzds99friqmir6g/wizardcoder-python-34b-v1.0.Q4_K_M.gguf?rlkey=lmsv797dcb95upq83l15c5fmy&st=1dhti2i1&dl=1"
-WIZARDCODER_PATH="models/wizardcoder-python-34b-v1.0.Q4_K_M.gguf"
+WIZARDCODER_URL="https://www.dropbox.com/scl/fi/gop0dewzds99friqmir6g/wizardcoder-python-34b-v1.0.Q4_K_M.gguf?rlkey=lmsv797dcb95upq83l15c5fmy&dl=1"
+WIZARDCODER_PATH="models/wizardcoder/wizardcoder-python-34b-v1.0.Q4_K_M.gguf"
 if [ ! -f "$WIZARDCODER_PATH" ]; then
     echo "Downloading WizardCoder model..."
     curl -L "$WIZARDCODER_URL" -o "$WIZARDCODER_PATH"
@@ -48,8 +50,8 @@ else
 fi
 
 # Download Swallow model if it doesn't exist
-SWALLOW_URL="https://www.dropbox.com/scl/fi/8cbfmd567t8e33nfrsys1/swallow-70b-instruct.Q4_K_M.gguf?rlkey=c6qt4nigiwkguhxcmobjbenkb&st=p3a9nqts&dl=1"
-SWALLOW_PATH="models/swallow-70b-instruct.Q4_K_M.gguf"
+SWALLOW_URL="https://www.dropbox.com/scl/fi/8cbfmd567t8e33nfrsys1/swallow-70b-instruct.Q4_K_M.gguf?rlkey=c6qt4nigiwkguhxcmobjbenkb&dl=1"
+SWALLOW_PATH="models/swallow/swallow-70b-instruct.Q4_K_M.gguf"
 if [ ! -f "$SWALLOW_PATH" ]; then
     echo "Downloading Swallow model..."
     curl -L "$SWALLOW_URL" -o "$SWALLOW_PATH"
